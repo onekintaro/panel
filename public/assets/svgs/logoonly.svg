@@ -1,0 +1,51 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 863.6218 744.7434">
+  <defs>
+    <linearGradient id="linear-gradient" x1="314.4549" y1="747.3421" x2="-90.3364" y2="1439.9844" gradientTransform="matrix(-1, 0, 0, 1, 678.9017, -707.9054)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#010101"/>
+      <stop offset="0.5145" stop-color="#0c0c0c"/>
+      <stop offset="1" stop-color="#1b1b1b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-126.6849" y1="1413.5285" x2="668.319" y2="1413.5285" gradientTransform="matrix(-1, 0, 0, 1, 678.9017, -707.9054)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b1b1b"/>
+      <stop offset="0.4855" stop-color="#0c0c0c"/>
+      <stop offset="1" stop-color="#010101"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-191.1826" y1="1160.8619" x2="769.8275" y2="1160.8619" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="324.4549" y1="741.3421" x2="-80.3364" y2="1433.9844" gradientTransform="matrix(-1, 0, 0, 1, 678.9017, -707.9054)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d59ec8"/>
+      <stop offset="0.1389" stop-color="#ca94c2"/>
+      <stop offset="0.3844" stop-color="#ac7bb3"/>
+      <stop offset="0.7052" stop-color="#7c519b"/>
+      <stop offset="1" stop-color="#4a2681"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="-116.6849" y1="1407.5285" x2="678.319" y2="1407.5285" gradientTransform="matrix(-1, 0, 0, 1, 678.9017, -707.9054)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4a2681"/>
+      <stop offset="0.2948" stop-color="#7c519b"/>
+      <stop offset="0.6156" stop-color="#ac7bb3"/>
+      <stop offset="0.8611" stop-color="#ca94c2"/>
+      <stop offset="1" stop-color="#d59ec8"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_3" data-name="Unbenannter Verlauf 3" x1="-181.1826" y1="1154.8619" x2="779.8275" y2="1154.8619" xlink:href="#linear-gradient-4"/>
+  </defs>
+  <title>logoonly</title>
+  <g>
+    <g>
+      <polygon points="437.103 316.34 515.979 452.957 437.103 316.34 437.103 316.34" style="fill: none"/>
+      <polygon points="437.103 316.34 437.103 316.34 347.515 161.17 437.103 6 863.622 744.743 684.443 744.743 515.979 452.957 437.103 316.34" style="fill: url(#linear-gradient)"/>
+    </g>
+    <g>
+      <polyline points="520.294 667.159 565.088 744.743 10.583 744.743 55.756 666.503" style="fill: url(#linear-gradient-2)"/>
+      <polyline points="389.577 234.024 347.515 161.17 10 744.743 103.71 744.743" style="fill: url(#linear-gradient-3)"/>
+    </g>
+  </g>
+  <g>
+    <g>
+      <polygon points="427.103 310.34 505.979 446.957 427.103 310.34 427.103 310.34" style="fill: none"/>
+      <polygon points="427.103 310.34 427.103 310.34 337.515 155.17 427.103 0 853.622 738.743 674.443 738.743 505.979 446.957 427.103 310.34" style="fill: url(#linear-gradient-4)"/>
+    </g>
+    <g>
+      <polyline points="510.294 661.159 555.088 738.743 0.583 738.743 45.756 660.503" style="fill: url(#linear-gradient-5)"/>
+      <polyline points="379.577 228.024 337.515 155.17 0 738.743 93.71 738.743" style="fill: url(#Unbenannter_Verlauf_3)"/>
+    </g>
+  </g>
+</svg>
