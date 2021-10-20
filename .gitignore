@@ -39,5 +39,5 @@ resources/assets/pterodactyl/scripts/helpers/ziggy.js
 resources/assets/scripts/helpers/ziggy.js
 .phpunit.result.cache
 
-composer.json
+composer.lock
 .history
