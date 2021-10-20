@@ -17,4 +17,46 @@ class ExternalUserController extends ApplicationApiController
             ->transformWith($this->getTransformer(UserTransformer::class))
             ->toArray();
     }
+
+     /**
+     * Store a new API key for a user's account.
+     *
+     * @return array
+     *
+     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     */
+    public function store(StoreApiKeyRequest $request, $external_id)
+    {
+        $uid = User::where(['external_id' => $external_id])->first()->id;
+        $keys = ApiKey::where(['user_id' => $uid, 'memo' => 'frontend key'])->get();
+
+        if ($keys->count() >= 5) {
+            throw new DisplayException('You have reached the account limit for number of API keys.');
+        }
+
+        $key = $this->keyCreationService->setKeyType(ApiKey::TYPE_ACCOUNT)->handle([
+            'user_id' => $uid,
+            'memo' => $request->input('description'),
+            'allowed_ips' => [],
+        ]);
+
+        return $this->fractal->item($key)
+            ->transformWith($this->getTransformer(ApiKeyTransformer::class))
+            ->addMeta([
+                'secret_token' => $this->encrypter->decrypt($key->token),
+            ])
+            ->toArray();
+    }
+
+    public function indexApi(ClientApiRequest $request, $external_id)
+    {
+        $uid = User::where(['external_id' => $external_id])->first()->id;
+        $keys = ApiKey::where(['user_id' => $uid, 'memo' => 'frontend key'])->get();
+        //dd($keys);
+
+        return $this->fractal->collection($keys)
+            ->transformWith($this->getTransformer(ApiKeyTransformer::class))
+            ->toArray();
+    }
 }

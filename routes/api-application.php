@@ -15,6 +15,8 @@ Route::group(['prefix' => '/users'], function () {
     Route::get('/', 'Users\UserController@index')->name('api.application.users');
     Route::get('/{user}', 'Users\UserController@view')->name('api.application.users.view');
     Route::get('/external/{external_id}', 'Users\ExternalUserController@index')->name('api.application.users.external');
+    Route::get('/external/{external_id}/api', 'Users\ExternalUserController@indexApi')->name('api.application.users.external.api.view');
+    Route::post('/external/{external_id}/api', 'Users\ExternalUserController@store')->name('api.application.users.external.api.store');
 
     Route::post('/', 'Users\UserController@store');
     Route::patch('/{user}', 'Users\UserController@update');
