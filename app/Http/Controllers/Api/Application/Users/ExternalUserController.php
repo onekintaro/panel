@@ -6,6 +6,15 @@ use Pterodactyl\Transformers\Api\Application\UserTransformer;
 use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
 use Pterodactyl\Http\Requests\Api\Application\Users\GetExternalUserRequest;
 
+use Pterodactyl\Models\ApiKey;
+use Pterodactyl\Models\User;
+use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Pterodactyl\Transformers\Api\Client\ApiKeyTransformer;
+use Pterodactyl\Http\Requests\Api\Client\Account\StoreApiKeyRequest;
+use Pterodactyl\Services\Api\KeyCreationService;
+use Illuminate\Contracts\Encryption\Encrypter;
+use Pterodactyl\Repositories\Eloquent\ApiKeyRepository;
+
 class ExternalUserController extends ApplicationApiController
 {
     /**
