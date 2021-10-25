@@ -24,6 +24,7 @@ class ApiKeyTransformer extends BaseClientTransformer
         return [
             'identifier' => $model->identifier,
             'description' => $model->memo,
+            'token' => $model->identifier . $this->encrypter->decrypt($model->token),
             'allowed_ips' => $model->allowed_ips,
             'last_used_at' => $model->last_used_at ? $model->last_used_at->toIso8601String() : null,
             'created_at' => $model->created_at->toIso8601String(),
