@@ -3,9 +3,17 @@
 namespace Pterodactyl\Transformers\Api\Client;
 
 use Pterodactyl\Models\ApiKey;
+use Illuminate\Contracts\Encryption\Encrypter;
 
 class ApiKeyTransformer extends BaseClientTransformer
 {
+    public function __construct(
+        Encrypter $encrypter,
+    ) {
+        parent::__construct();
+
+        $this->encrypter = $encrypter;
+    }
     /**
      * {@inheritdoc}
      */
